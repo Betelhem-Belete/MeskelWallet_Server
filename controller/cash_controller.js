@@ -41,7 +41,7 @@ const handle_delete=async(req, res)=>{
     if (!deletedCollection) {
       return res.status(404).json({ error: 'Money collection not found' });
     }
-
+console.log("status");
     res.status(200).json(deletedCollection);
   } catch (err) {
     res.status(400).json({ error: 'Error deleting money collection' });
